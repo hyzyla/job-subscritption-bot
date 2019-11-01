@@ -1,7 +1,8 @@
-from flask import Flask
+from flask import Flask, request, jsonify
+
+app = Flask(__name__)
 
 
-def create_app():
-    app = Flask(__name__.split(".")[0])
-    # app.config.from_object(config_object)
-    return app
+@app.route('/')
+def index():
+    return "<h1>Welcome to our server !!</h1>"
